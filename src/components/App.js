@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import PokeList from './PokeList';
-import DetailView from './DetailView';
-import Pokemon from '../Pokemon';
-import './styles/App.css';
+import React, { Component } from "react";
+import { Container } from "reactstrap";
+import PokeList from "./PokeList";
+import DetailView from "./DetailView";
+import Pokemon from "../Pokemon";
+import "./styles/App.css";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      pokemon: {},
+      pokemon: {}
     };
 
     this.handleOnClick = this.handleOnClick.bind(this);
@@ -17,7 +18,7 @@ class App extends Component {
   handleOnClick(id) {
     fetch(`http://pokeapi.co/api/v2/pokemon/${id}/`)
       .then(res => res.json())
-      .then((data) => {
+      .then(data => {
         const pokemon = new Pokemon(data);
 
         this.setState({ pokemon });
@@ -28,10 +29,10 @@ class App extends Component {
   render() {
     const { pokemon } = this.state;
     return (
-      <div className="App">
+      <Container className="App">
         <PokeList handleOnClick={this.handleOnClick} />
         <DetailView pokemon={pokemon} />
-      </div>
+      </Container>
     );
   }
 }

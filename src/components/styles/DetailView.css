@@ -1,5 +1,6 @@
 .detail-view {
-  width: 50%;
+  display: flex;
+  width: 100%;
   height: 100%;
   padding: 10px;
   background-color: #df095e;
@@ -10,10 +11,23 @@
   justify-content: center;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 500px;
+  padding-left: 10px;
+  margin: 50px auto;
+  background-color: #FE0065;
+  border-radius: 10px;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
 .sprite-image {
-  width: 80%;
-  height: 150px;
-  margin: 10px auto;
+  width: 70%;
+  height: 250px;
+  margin: 20px auto;
   background-color: #585858;
   border: 15px solid #DEDEDE;
   border-radius: 5px;
@@ -21,7 +35,7 @@
 }
 
 .data-wrapper {
-  width: 80%;
+  width: 70%;
   height: 110px;
   padding: 10px;
   margin: 0 auto;
@@ -36,5 +50,5 @@
 }
 
 .data-char {
-  font-size: 10px;
+  font-size: 20px;
 }

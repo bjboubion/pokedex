@@ -1,8 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import PokeCell from './PokeCell';
-import pokeClasses from '../pokeClasses';
-import './styles/PokeList.css';
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import PropTypes from "prop-types";
+import PokeCell from "./PokeCell";
+import pokeClasses from "../pokeClasses";
+import "./styles/PokeList.css";
 
 const PokeList = ({ handleOnClick }) => {
   const cells = pokeClasses.map(pokeClass => (
@@ -13,14 +14,14 @@ const PokeList = ({ handleOnClick }) => {
     />
   ));
   return (
-    <section className="poke-list">
-      {cells}
-    </section>
+    <Container className="container">
+      <Row className="poke-list">{cells}</Row>
+    </Container>
   );
 };
 
 PokeList.propTypes = {
-  handleOnClick: PropTypes.func.isRequired,
+  handleOnClick: PropTypes.func.isRequired
 };
 
 export default PokeList;
