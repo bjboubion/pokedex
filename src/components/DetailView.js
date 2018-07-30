@@ -7,13 +7,19 @@ const DetailView = ({ pokemon }) => {
   const { name, sprite, type } = pokemon;
 
   return (
-    <Container className="container">
-      <Row sm="12" xs="6" className="detail-view">
-        <img src={sprite} className="sprite-image" alt="sprite" />
-        <div className="data-wrapper">
-          <h3 className="data-name">Name: {name}</h3>
-          <h3 className="data-char">Type: {type} </h3>
-        </div>
+    <Container className="detail-view">
+      <Row>
+        <Col sm="12" xs="6">
+          <img src={sprite} className="sprite-image" alt="sprite" />
+        </Col>
+      </Row>
+      <Row>
+        <Col sm="12" xs="6">
+          <div className="data-wrapper">
+            <h3 className="data-name">Name: {name}</h3>
+            <h3 className="data-char">Type: {type} </h3>
+          </div>
+        </Col>
       </Row>
     </Container>
   );

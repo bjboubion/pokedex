@@ -14,7 +14,7 @@ const PokeList = ({ handleOnClick }) => {
     />
   ));
   return (
-    <Container className="container">
+    <Container className="Container">
       <Row className="poke-list">{cells}</Row>
     </Container>
   );
